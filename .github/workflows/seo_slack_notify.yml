@@ -2,8 +2,8 @@ name: SEO Rank Checker to Slack
 
 on:
   schedule:
-    # 毎日 日本時間の朝9時 (UTCの深夜0時) に実行
-    - cron: '0 0 * * *'
+    # 毎日 日本時間の午後14時 (UTCの午前5時) に実行
+    - cron: '0 5 * * *'
   workflow_dispatch: # GitHubの画面から手動実行できるようにする
 
 jobs:
@@ -25,4 +25,5 @@ jobs:
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          TARGETS_JSON: ${{ vars.TARGETS_JSON }}
         run: python check_rank.py

@@ -6,12 +6,9 @@ import json
 SERPAPI_KEY = os.environ.get("SERPAPI_KEY")
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL")
 
-# チェック対象のリスト
-TARGETS = [
-    {"keyword": "キーワード", "domain": "example.com"},
-    {"keyword": "キーワード2", "domain": "example.com"},
-    {"keyword": "キーワード3", "domain": "example.com"}
-]
+# チェック対象のリスト（GitHub Variables の TARGETS_JSON から取得）
+# 例: [{"keyword": "キーワード", "domain": "example.com"}]
+TARGETS = json.loads(os.environ.get("TARGETS_JSON", "[]"))
 
 def get_ranking(keyword, target_domain):
     url = "https://serpapi.com/search"
