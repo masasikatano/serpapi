@@ -68,18 +68,6 @@ Actions タブから **SEO Rank Checker to Slack** を選択し、**Run workflow
 - GitHub Actionsの`actions/cache`またはartifactで永続化
 - 初回実行時は変動表示なし、2回目以降から比較表示
 
-## Slack 通知サンプル
-
-```
-📊 本日の検索順位レポート
-• 『サマナーズウォー』: *3位* (summonerswar.monster)
-• 『サマナーズウォーランキング』: *1位* (summonerswar.monster)
-• 『昭和mtg』: *6位 (↑+2)* (mtg.syowa.workers.dev)
-
-詳細情報:
-• 『昭和mtg』: SERP特徴: ナレッジグラフ, 関連質問
-```
-
 ### 順位変動の見方
 - `(↑+2)` → 前回より2位上昇
 - `(↓-3)` → 前回より3位下降
