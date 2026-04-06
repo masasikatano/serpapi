@@ -1,0 +1,16 @@
+{
+  "project": {
+    "name": "SEO Rank Checker",
+    "description": "GitHub Actions + SerpAPI でGoogle検索順位をチェックしSlack通知",
+    "language": "Python"
+  },
+  "preferences": {
+    "auto_test": true,
+    "code_style": "minimal_changes",
+    "documentation": "update_agents_md"
+  },
+  "commands": {
+    "test": "python check_rank.py",
+    "lint": "python -m py_compile check_rank.py"
+  }
+}

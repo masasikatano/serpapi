@@ -1,0 +1,22 @@
+# 依存関係
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 一時ファイル
+*.log
+*.tmp
+.DS_Store
+
+# 機密情報
+.env
+.env.local
+
+# 生成ファイル
+previous_results.json
+
+# IDE
+.vscode/
+.idea/

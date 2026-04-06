@@ -1,0 +1,11 @@
+{
+  "project": {
+    "name": "SEO Rank Checker",
+    "description": "GitHub Actions + SerpAPI でGoogle検索順位をチェックしSlack通知",
+    "language": "Python"
+  },
+  "preferences": {
+    "code_style": "minimal_changes",
+    "documentation": "update_agents_md"
+  }
+}

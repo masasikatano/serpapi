@@ -2,8 +2,8 @@ name: SEO Rank Checker to Slack
 
 on:
   schedule:
-    # 毎日 日本時間の午後14時 (UTCの午前5時) に実行
-    - cron: '0 5 * * *'
+    # 毎日 日本時間の午後12時 (UTCの午前3時) に実行
+    - cron: '0 3 * * *'
   workflow_dispatch: # GitHubの画面から手動実行できるようにする
 
 jobs:
@@ -20,6 +20,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests
+
+      - name: Restore previous results
+        uses: actions/cache@v4
+        with:
+          path: previous_results.json
+          key: seo-rank-results-${{ github.run_id }}
+          restore-keys: seo-rank-results-
 
       - name: Run Rank Checker
         env:
